@@ -52,47 +52,61 @@ catalog:
           - name: "Override Configuration"
             path: "/en/setup/configuration/override-settings"
 
-          - name: "Plugins"
-            path: "/en/setup/plugins/plugin-list"
+      - name: "Plugins"
+        path: "/en/setup/plugins/plugin-list"
+        catalog:
+          - name: "client"
             catalog:
-              - name: "client"
-                catalog:
-                  - name: "kafka-client"
-                    path: "/en/setup/plugins/client_kafka-client"
-              - name: "fallbacker"
-                catalog:
-                  - name: "none-fallbacker"
-                    path: "/en/setup/plugins/fallbacker_none-fallbacker"
-                  - name: "timer-fallbacker"
-                    path: "/en/setup/plugins/fallbacker_timer-fallbacker"
-              - name: "forwarder"
-                catalog:
-                  - name: "nativelog-kafka-forwarder"
-                    path: "/en/setup/plugins/forwarder_nativelog-kafka-forwarder"
-              - name: "queue"
-                catalog:
-                  - name: "memory-queue"
-                    path: "/en/setup/plugins/queue_memory-queue"
-                  - name: "mmap-queue"
-                    path: "/en/setup/plugins/queue_mmap-queue"
-              - name: "receiver"
-                catalog:
-                  - name: "grpc-nativelog-receiver"
-                    path: "/en/setup/plugins/receiver_grpc-nativelog-receiver"
-                  - name: "http-nativelog-receiver"
-                    path: "/en/setup/plugins/receiver_http-nativelog-receiver"
-              - name: "server"
-                catalog:
-                  - name: "grpc-server"
-                    path: "/en/setup/plugins/server_grpc-server"
-                  - name: "http-server"
-                    path: "/en/setup/plugins/server_http-server"
-                  - name: "prometheus-server"
-                    path: "/en/setup/plugins/server_http-server"
+              - name: "kafka-client"
+                path: "/en/setup/plugins/client_kafka-client"
+          - name: "fallbacker"
+            catalog:
+              - name: "none-fallbacker"
+                path: "/en/setup/plugins/fallbacker_none-fallbacker"
+              - name: "timer-fallbacker"
+                path: "/en/setup/plugins/fallbacker_timer-fallbacker"
+          - name: "forwarder"
+            catalog:
+              - name: "nativelog-kafka-forwarder"
+                path: "/en/setup/plugins/forwarder_nativelog-kafka-forwarder"
+          - name: "queue"
+            catalog:
+              - name: "memory-queue"
+                path: "/en/setup/plugins/queue_memory-queue"
+              - name: "mmap-queue"
+                path: "/en/setup/plugins/queue_mmap-queue"
+          - name: "receiver"
+            catalog:
+              - name: "grpc-nativelog-receiver"
+                path: "/en/setup/plugins/receiver_grpc-nativelog-receiver"
+              - name: "http-nativelog-receiver"
+                path: "/en/setup/plugins/receiver_http-nativelog-receiver"
+          - name: "server"
+            catalog:
+              - name: "grpc-server"
+                path: "/en/setup/plugins/server_grpc-server"
+              - name: "http-server"
+                path: "/en/setup/plugins/server_http-server"
+              - name: "prometheus-server"
+                path: "/en/setup/plugins/server_http-server"
 
-  - name: "Contributing Guides"
+  - name: "Guides"
     path: "/en/guides/readme"
-
+    catalog:
+      - name: "Contribution"
+        catalog:
+          - name: "How to write a plugin"
+            path: "/en/guides/contribution/How-to-write-plugin"
+          - name: "How to release"
+            path: "/en/guides/contribution/How-to-release"
+      - name: "Test"
+        catalog:
+          - name: "How to do unit test"
+            path: "/en/guides/test/How-to-unit-test"
+      - name: "Compile"
+        catalog:
+          - name: "How to compile SkyWalking Satellite"
+            path: "/en/guides/compile/How-to-compile"
   - name: "FAQs"
     path: "/en/FAQ/readme"
 
